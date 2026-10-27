@@ -1,0 +1,39 @@
+{
+    "labs": [
+        {
+            "id": 1,
+            "title": "Lab 1",
+            "description": "HTML Fundamentals",
+            "links": [
+                {
+                    "title": "Exercise A",
+                    "url": "https://ddshahidah.github.io/CSF3133_S79818/Lab1/lab1_ExerA.html",
+                    "type": "exercise"
+                },
+                {
+                    "title": "Exercise B",
+                    "url": "https://ddshahidah.github.io/CSF3133_S79818/Lab1/lab1_ExerB.html",
+                    "type": "exercise"
+                },
+                {
+                    "title": "Contact",
+                    "url": "https://ddshahidah.github.io/CSF3133_S79818/Lab1/contact.html",
+                    "type": "page"
+                },
+                {
+                    "title": "Lab Report PDF",
+                    "url": "https://ddshahidah.github.io/CSF3133_S79818/Lab1/CSF3133_S79818_LAB1.pdf",
+                    "type": "pdf"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Lab 2",
+            "description": "Lab 2",
+            "links": [
+                
+            ]
+        }
+    ]
+}
