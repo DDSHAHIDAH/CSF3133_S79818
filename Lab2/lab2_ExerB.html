@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSF3133 Course Feedback</title>
+</head>
+<body>
+    <!--
+    ERRORS on given code:
+
+    Error 1 (Line 10): </head> is used instead of </header>.
+    Error 2 (Line 20): Rating uses <td> instead of <th> in the table header.
+    Error 3 (Line 26): <tr> is used instead of </tr> to close the Week 1 row.
+    Error 4 (Line 28): colspan="3" is incorrect because the row should contain separate Topic and Rating cells.
+    Error 5 (Line 28): Week 2 is missing a separate Rating cell.
+    Error 6 (Line 32): The "Semantic HTML" <td> element is missing its closing </td>.
+    Error 7 (Lines 40-41): The label uses for="name" but the input id is "fullname".
+    Error 8 (Lines 43-45): The radio buttons use different name attributes, allowing multiple selections.
+    Error 9 (Lines 47-48): The checkbox id is "lab" but its label uses for="labs".
+    -->
+
+    <!--Header Section-->
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+        <p>Share your learning experience and help us improve the course.</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#results">Results</a> |
+        <a href="#form">Feedback Form</a> |
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <hr>
+
+    <!-- Feedback Summary Section -->
+    <section id="results">
+        <h2>Feedback Summary</h2>
+
+        <table border="1">
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Rating</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Introduction to HTML</td>
+                <td>4.5</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Tables and Forms</td>
+                <td>4.2</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Semantic HTML</td>
+                <td>4.0</td>
+            </tr>
+
+            <!-- Week 4 and Week 5 share the same topic -->
+            <tr>
+                <td>4</td>
+                <td rowspan="2">Mini Project</td>
+                <td>4.6</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>4.4</td>
+            </tr>
+
+            <!-- Average Rating Row -->
+            <tr>
+                <th colspan="2">Average Rating</th>
+                <td>4.34</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+    
+    <!-- Feedback Form Section -->
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+
+        <form action="submit_feedback.php" method="post">
+
+            <!-- Name Input -->
+            <p>
+                <label for="fullname">Name:</label>
+                <input type="text" id="fullname" name="fullname">
+            </p>
+
+            <!-- E-mail Input -->
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </p>
+
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating</legend>
+
+                <input type="radio" id="good" name="rating" value="good">
+                <label for="good">Good</label>
+
+                <br>
+
+                <input type="radio" id="average" name="rating" value="average">
+                <label for="average">Average</label>
+
+                <br>
+
+                <input type="radio" id="poor" name="rating" value="poor">
+                <label for="poor">Poor</label>
+            </fieldset>
+
+            <br>
+
+            <!-- Topics for More Practice -->
+            <fieldset>
+                <legend>Topics I Want More Practice On</legend>
+
+                <input type="checkbox" id="html" name="topics[]" value="HTML">
+                <label for="html">HTML Basics</label>
+
+                <br>
+
+                <input type="checkbox" id="tables" name="topics[]" value="Tables and Forms">
+                <label for="tables">Tables and Forms</label>
+
+                <br>
+
+                <input type="checkbox" id="semantic" name="topics[]" value="Semantic HTML">
+                <label for="semantic">Semantic HTML</label>
+            </fieldset>
+
+            <br>
+
+            <!-- Section or Group Selection -->
+            <p>
+                <label for="group">Section/Group:</label>
+
+                <select id="group" name="group">
+                    <option value="">Select Section/Group</option>
+                    <option value="K1">K1</option>
+                    <option value="K2">K2</option>
+                    <option value="K3">K3</option>
+                    <option value="K4">K4</option>
+                </select>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+
+        </form>
+    </section>
+
+    <!-- Student Comments Section -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+
+        <article>
+            <h3>Ahmad</h3>
+            <p>
+                The HTML lessons were easy to understand and the practical exercises
+                helped me understand how web pages are structured.
+            </p>
+        </article>
+
+        <article>
+            <h3>Siti</h3>
+            <p>
+                I enjoyed learning about tables and forms. I would like to have more
+                practical exercises on semantic HTML.
+            </p>
+        </article>
+    </section>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facultry Tech Innovation Day 2026</title>
+</head>
+<body>
+
+    <!--Header Section-->
+    <header>
+        <h1>Faculty Tech Innovation Day 2026</h1>
+        <p>Explore, Learn and Innovate Together</p>
+    </header>
+
+    <!--Navigation-->
+    <nav>
+        <a href="#about">About the Event</a> |
+        <a href="#schedule">Event Schedule</a> |
+        <a href="#register">Registration</a>
+    </nav>
+
+    <hr>
+
+    <!--About Section-->
+    <section id="about">
+        <h2>About the Event</h2>
+
+        <p>
+            Faculty Tech Innovation Day 2026 is a one-day technology event
+            organised for university students to explore programming,
+            cybersecurity, software development and current technology trends.
+        </p>
+
+        <!-- First Article -->
+        <article>
+            <h3>Web Development Workshop</h3>
+            <p>
+                This workshop introduces students to modern web development
+                concepts and demonstrates how websites are structured using
+                HTML and other web technologies.
+            </p>
+        </article>
+
+        <!-- Second Article -->
+        <article>
+            <h3>Cybersecurity Awareness Session</h3>
+            <p>
+                This session introduces common cybersecurity threats and
+                explains how students can protect their personal information
+                and online accounts.
+            </p>
+        </article>
+    </section>
+
+    <hr>
+
+    <!--Event Schedule-->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+
+        <table border="1">
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Venue</th>
+                <th>Person in Charge</th>
+            </tr>
+
+            <tr>
+                <td>8:00 AM - 9:00 AM</td>
+                <td>Registration and Breakfast</td>
+                <td>Main Lobby</td>
+                <td>Student Committee</td>
+            </tr>
+
+            <tr>
+                <td>9:00 AM - 10:00 AM</td>
+                <td>Opening Ceremony</td>
+                <td>Main Hall</td>
+                <td>Event Director</td>
+            </tr>
+
+            <tr>
+                <td>10:00 AM - 11:30 AM</td>
+                <td>Web Development Workshop</td>
+                <td rowspan="2">Computer Lab 1</td>
+                <td>Dr. Amir Hakim</td>
+            </tr>
+
+            <tr>
+                <td>11:30 AM - 1:00 PM</td>
+                <td>Cybersecurity Awareness Session</td>
+                <td>Mr. Daniel Lee</td>
+            </tr>
+
+            <tr>
+                <td>1:00 PM - 2:00 PM</td>
+                <td colspan="3">Lunch Break</td>
+            </tr>
+
+            <tr>
+                <td>2:00 PM - 4:00 PM</td>
+                <td>Programming Challenge</td>
+                <td>Computer Lab 2</td>
+                <td>Programming Club</td>
+            </tr>
+
+            <tr>
+                <td>4:00 PM - 5:00 PM</td>
+                <td>Career Sharing Session</td>
+                <td>Main Hall</td>
+                <td>Industry Speaker</td>
+            </tr>
+
+            <tr>
+                <td>5:00 PM - 5:30 PM</td>
+                <td>Closing Ceremony and Prize Giving</td>
+                <td>Main Hall</td>
+                <td>Event Director</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <!--Registration Section-->
+    <section id="register">
+        <h2>Event Registration</h2>
+
+        <form action="register.html" method="post">
+
+            <!-- Personal Information -->
+            <p>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </p>
+
+            <p>
+                <label for="matric">Matric Number:</label>
+                <input type="text" id="matric" name="matric" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <!-- Year of Study -->
+            <fieldset>
+                <legend>Year of Study</legend>
+
+                <input type="radio" id="year1" name="year" value="Year 1">
+                <label for="year1">Year 1</label>
+
+                <br>
+
+                <input type="radio" id="year2" name="year" value="Year 2">
+                <label for="year2">Year 2</label>
+
+                <br>
+
+                <input type="radio" id="year3" name="year" value="Year 3">
+                <label for="year3">Year 3</label>
+
+                <br>
+
+                <input type="radio" id="year4" name="year" value="Year 4">
+                <label for="year4">Year 4</label>
+            </fieldset>
+
+            <br>
+
+            <!-- Session Selection -->
+            <fieldset>
+                <legend>Sessions You Want to Join</legend>
+
+                <input type="checkbox" id="web" name="sessions[]" value="Web Development Workshop">
+                <label for="web">Web Development Workshop</label>
+
+                <br>
+
+                <input type="checkbox" id="cybersecurity" name="sessions[]" value="Cybersecurity Awareness">
+                <label for="cybersecurity">Cybersecurity Awareness Session</label>
+
+                <br>
+
+                <input type="checkbox" id="programming" name="sessions[]" value="Programming Challenge">
+                <label for="programming">Programming Challenge</label>
+
+                <br>
+
+                <input type="checkbox" id="career" name="sessions[]" value="Career Sharing">
+                <label for="career">Career Sharing Session</label>
+            </fieldset>
+
+            <br>
+
+            <!-- Programme Selection -->
+            <p>
+                <label for="programme">Programme:</label>
+
+                <select id="programme" name="programme">
+                    <option value="">Select Programme</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Data Science">Data Science</option>
+                </select>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <input type="submit" value="Register">
+            </p>
+
+        </form>
+    </section>
+
+    <hr>
+
+    <footer>
+        <p>Organized by the Faculty of Computer Science</p>
+        <p>&copy; 2026 Faculty Tech Innovation Day. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
