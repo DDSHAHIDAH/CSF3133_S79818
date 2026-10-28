@@ -32,7 +32,29 @@
             "title": "Lab 2",
             "description": "Lab 2",
             "links": [
-                
+                {
+                    "title": "Exercise A",
+                    "url": "https://ddshahidah.github.io/CSF3133_S79818/Lab2/lab2_ExerA.html",
+                    "type": "exercise"
+                },
+
+                {
+                    "title": "register.html",
+                    "url": "https://ddshahidah.github.io/CSF3133_S79818/Lab2/register.html",
+                    "type": "exercise"
+                },
+
+                {
+                    "title": "Exercise B",
+                    "url": "https://ddshahidah.github.io/CSF3133_S79818/Lab2/lab2_ExerB.html",
+                    "type": "exercise"
+                },
+
+                {
+                    "title": "Lab Report PDF",
+                    "url": "https://ddshahidah.github.io/CSF3133_S79818/Lab2/Lab2_CSF3133_S79818.pdf",
+                    "type": "pdf"
+                }
             ]
         }
     ]
