@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusBake Online Order</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div id="header">
+        <h1>CampusBake&reg;
+            <span>Freshly Baked with Love!</span>
+        </h1>
+    </div>
+
+    <!-- Navigation Section -->
+    <div id="nav">
+        <a href="#content">Home</a> |
+        <a href="#sidebar">Price List</a> |
+        <a href="#order">Order Now</a>
+    </div>
+
+    <hr>
+
+    <!-- Main Content Section -->
+    <div id="content">
+
+        <h2>Welcome to CampusBake</h2>
+
+        <p>
+            Welcome to <strong>CampusBake</strong>!
+            We provide <em>fresh and delicious</em>
+            bakery products for students.
+            <span>Order your favourite treats today!</span>
+            <a href="#sidebar">View our prices</a>.
+        </p>
+
+        <!-- Order Form Section -->
+        <div id="order">
+            <h2>Bakery Order Form</h2>
+
+            <form action="purchase-confirmation.html" method="get"
+                  oninput="total.value =
+                  (Number(cupcakes.value) * 3) +
+                  (Number(slices.value) * 5)">
+
+                <p>
+                    <label for="customerName">
+                        Customer Name:
+                    </label>
+                    <input type="text"
+                           id="customerName"
+                           name="customerName"
+                           placeholder="Enter your name"
+                           required autofocus>
+                </p>
+
+                <p>
+                    <label for="phone">
+                        Phone Number:
+                    </label>
+                    <input type="tel"
+                           id="phone"
+                           name="phone"
+                           placeholder="0123456789"
+                           required>
+                </p>
+
+                <p>
+                    <label for="email">
+                        Email Address:
+                    </label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="example@gmail.com"
+                           required>
+                </p>
+
+                <p>
+                    <label for="pickupDate">
+                        Pick-up Date:
+                    </label>
+                    <input type="date"
+                           id="pickupDate"
+                           name="pickupDate"
+                           required>
+                </p>
+
+                <p>
+                    <label for="pickupTime">
+                        Pick-up Time:
+                    </label>
+                    <input type="time"
+                           id="pickupTime"
+                           name="pickupTime"
+                           required>
+                </p>
+
+                <!-- Datalist for Flavours -->
+                <p>
+                    <label for="flavour">
+                        Choose Flavour:
+                    </label>
+                    <input list="flavours"
+                           id="flavour"
+                           name="flavour"
+                           required>
+
+                    <datalist id="flavours">
+                        <option value="Chocolate">
+                        <option value="Vanilla">
+                        <option value="Strawberry">
+                        <option value="Red Velvet">
+                    </datalist>
+                </p>
+
+                <!-- Colour Input -->
+                <p>
+                    <label for="icing">
+                        Icing Colour:
+                    </label>
+                    <input type="color"
+                           id="icing"
+                           name="icing"
+                           value="#ff6699">
+                </p>
+
+                <!-- Range Slider -->
+                <p>
+                    <label for="sweetness">
+                        Sweetness Level (1-5):
+                    </label>
+                    <input type="range"
+                           id="sweetness"
+                           name="sweetness"
+                           min="1"
+                           max="5"
+                           step="1"
+                           value="3">
+                </p>
+
+                <!-- Price Calculator -->
+                <h3>Calculate Your Order</h3>
+
+                <p>
+                    <label for="cupcakes">
+                        Cupcakes (RM 3.00 each):
+                    </label>
+                    <input type="number"
+                           id="cupcakes"
+                           name="cupcakes"
+                           min="0"
+                           value="0">
+                </p>
+
+                <p>
+                    <label for="slices">
+                        Cake Slices (RM 5.00 each):
+                    </label>
+                    <input type="number"
+                           id="slices"
+                           name="slices"
+                           min="0"
+                           value="0">
+                </p>
+
+                <p>
+                    <strong>Total Price: RM
+                        <output name="total"
+                                for="cupcakes slices">0</output>
+                    </strong>
+                </p>
+
+                <p>
+                    <button type="submit">
+                        Submit Order
+                    </button>
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Sidebar Section -->
+    <div id="sidebar">
+        <h2>Price List</h2>
+
+        <ul>
+            <li>Cupcakes - RM 3.00 each</li>
+            <li>Cake Slices - RM 5.00 each</li>
+            <li>Cookies - RM 2.00 each</li>
+            <li>Brownies - RM 4.00 each</li>
+        </ul>
+
+        <p>
+            Orders &gt; 10 pieces get a free drink!
+        </p>
+
+        <p>
+            Special offer: Save RM 1
+            on selected international orders.
+        </p>
+    </div>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <p>
+            &copy; 2026 CampusBake&reg;.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Fresh&nbsp;Bakery &amp; Happy Customers!
+        </p>
+    </div>
+
+    <!--
+    Testing Observations:
+
+    1. When Submit is clicked with all required
+       fields empty, the browser prevents submission
+       and asks the user to complete a required field.
+
+    2. When "myemail" is entered into the email
+       field, the browser displays a validation
+       message because the email format is invalid.
+
+    3. The total price updates automatically when
+       the cupcake or cake slice quantity changes.
+    -->
+
+</body>
+</html>
