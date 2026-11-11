@@ -1,0 +1,709 @@
+
+/* =========================================
+   VISIT TERENGGANU - EXTERNAL STYLESHEET
+   CSF3133 Additional Lab Exercise 4
+   ========================================= */
+
+/* 1. Global Reset and Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #19334a;
+    background-color: #ffffff;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* 2. Interactive Link States
+   Correct order: LVHA
+   Link -> Visited -> Hover -> Active */
+
+a:link {
+    color: #007c98;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #5364a8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f59e0b;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #e63946;
+    text-decoration: underline;
+}
+
+/* 3. Shared Layout */
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 85px 0;
+}
+
+.section-label {
+    color: #0098ae;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 38px);
+    text-align: center;
+    margin: 10px 0 16px;
+    text-decoration: underline;
+    text-decoration-color: #00a6bd;
+    text-underline-offset: 9px;
+}
+
+/* 4. Header and Navigation */
+
+.site-header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo:link,
+.logo:visited {
+    color: #123c55;
+}
+
+.logo span {
+    color: #00a6bd;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style-type: none;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 11px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+.nav-menu a:link,
+.nav-menu a:visited {
+    color: #19334a;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    background-color: #007f98;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu a:active {
+    background-color: #004d65;
+    color: #ffd166;
+}
+
+/* 5. Hero Section */
+
+.hero {
+    min-height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 90px 20px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    color: #a8e8ef;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-decoration: overline;
+    text-decoration-color: #ffd166;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+}
+
+.hero-description {
+    font-size: 17px;
+    max-width: 680px;
+    margin: 0 auto 35px;
+    color: #f1f8fa;
+}
+
+/* 6. Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.25s ease,
+                background-color 0.25s ease;
+}
+
+.btn-primary:link,
+.btn-primary:visited {
+    background-color: #ffd166;
+    color: #153448;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #ffbd35;
+    color: #153448;
+    transform: translateY(-3px);
+}
+
+.btn-primary:active {
+    background-color: #e8a900;
+    transform: translateY(0);
+}
+
+/* 7. Destination Cards */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e0e8ed;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.13);
+}
+
+.card img {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.category {
+    font-size: 11px;
+    color: #008b9f;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #526477;
+    min-height: 120px;
+}
+
+.price-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.old-price {
+    color: #8995a0;
+    font-size: 16px;
+    text-decoration: line-through;
+}
+
+.price {
+    color: #008b83;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.card-link {
+    display: inline-block;
+    font-weight: 700;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 3px;
+}
+
+/* 8. Booking Progress */
+
+.booking-status {
+    max-width: 650px;
+    margin: 55px auto 0;
+    padding: 30px;
+    border: 1px solid #d5e9ef;
+    border-radius: 14px;
+    background-color: #f1fafc;
+    text-align: center;
+}
+
+.booking-status h3 {
+    margin-bottom: 10px;
+}
+
+.booking-status label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: bold;
+}
+
+.booking-status meter {
+    display: block;
+    width: 100%;
+    height: 24px;
+    accent-color: #009e9b;
+}
+
+.meter-note {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #526477;
+}
+
+/* 9. Video Section */
+
+.video-figure {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video-figure video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-color: #102c3e;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.caption {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #526477;
+    font-style: italic;
+}
+
+/* 10. Trip Interest Form */
+
+.trip-form {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #f8fbfd;
+    border: 1px solid #dce8ee;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group > label,
+.form-group legend {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #b8ccd6;
+    border-radius: 7px;
+    background: white;
+    font: inherit;
+}
+
+.form-group input:focus {
+    outline: 2px solid #009bb4;
+    outline-offset: 2px;
+}
+
+fieldset.form-group {
+    border: none;
+    min-width: 0;
+}
+
+.option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 22px;
+}
+
+.option-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.option-group input {
+    accent-color: #008eaa;
+    width: 16px;
+    height: 16px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #008aa5;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #006b85;
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    background-color: #004c62;
+    transform: translateY(0);
+}
+
+.form-note {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #64748b;
+    text-align: center;
+}
+
+/* 11. Footer */
+
+.site-footer {
+    background-color: #102f43;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-content h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.footer-content p {
+    color: #d1e1e8;
+}
+
+.site-footer address {
+    margin: 18px 0;
+    font-style: normal;
+}
+
+.site-footer a:link,
+.site-footer a:visited {
+    color: #a8e8ef;
+}
+
+.site-footer a:hover {
+    color: #ffd166;
+}
+
+.site-footer a:active {
+    color: #ff8c69;
+}
+
+.copyright {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #345466;
+    font-size: 12px;
+}
+
+/* 12. Responsive Tablet Design */
+
+@media (max-width: 900px) {
+
+    .header-container {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-content p {
+        min-height: 0;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+}
+
+/* 13. Responsive Mobile Design */
+
+@media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 145px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .header-container {
+        width: 100%;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-menu {
+        gap: 3px;
+    }
+
+    .nav-menu a {
+        padding: 8px 9px;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 460px;
+        padding: 70px 20px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 210px;
+    }
+
+    .card-content {
+        padding: 22px;
+    }
+
+    .booking-status {
+        padding: 22px;
+    }
+
+    .trip-form {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .option-group {
+        gap: 12px;
+    }
+
+    .video-figure video {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* 14. Accessibility: Keyboard Focus */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+/* 15. Reduced Motion Preference */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
+
+
+/* Confirmation Overlay */
+
+.confirmation-box {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 30, 45, 0.7);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Display confirmation when targeted */
+
+.confirmation-box:target {
+    display: flex;
+}
+
+.confirmation-content {
+    background: white;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    background: #e2f8ed;
+    color: #15945c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 20px;
+}
+
+.confirmation-content h2 {
+    color: #19334a;
+    margin-bottom: 15px;
+}
+
+.confirmation-content p {
+    color: #526477;
+    margin-bottom: 15px;
+}
+
+.confirmation-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: #008aa5;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.confirmation-button:link,
+.confirmation-button:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.confirmation-button:hover {
+    background: #006b85;
+    color: white;
+}
+
+.confirmation-button:active {
+    background: #004c62;
+    color: white;
+}
+
+
+

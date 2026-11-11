@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- Added viewport meta tag for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="e-Café Campus food, drinks and student promotions.">
+
+    <title>e-Café Campus</title>
+
+    <!-- External CSS for navigation and page styling -->
+    <link rel="stylesheet" href="cafe.css">
+
+    <!-- Internal CSS retained and corrected from the original code -->
+    <style>
+        /* Corrected invalid CSS and missing closing brace */
+        #intro {
+            font-size: 18px;
+            background-color: #FDEBD0;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        /* Corrected class selector: added a dot */
+        .highlight {
+            font-weight: bold;
+            color: #C0392B;
+        }
+
+        /* Corrected heading text decoration */
+        h1 {
+            text-decoration: overline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+    ERROR IDENTIFICATION AND CORRECTION
+
+    Error 1 (Line 1):
+    Missing opening angle bracket in DOCTYPE.
+    Fixed: <!DOCTYPE html>
+
+    Error 2 (Line 9):
+    Invalid CSS value "no" for list-style-type.
+    Fixed: list-style-type: none;
+
+    Error 3 (Line 13):
+    Invalid color declaration with missing semicolon.
+    Fixed: color: #1A5276;
+
+    Error 4 (Lines 14-16):
+    CSS link states were in the wrong order.
+    Fixed: :link, :visited, :hover, :active.
+
+    Error 5 (Line 17):
+    Invalid text-decoration value "overlined".
+    Fixed: text-decoration: overline;
+
+    Error 6 (Lines 19-22):
+    Missing closing brace for #intro selector.
+    Fixed: Added the closing brace.
+
+    Error 7 (Line 22):
+    "highlight" was written as an element selector.
+    Fixed: Changed to .highlight class selector.
+
+    Error 8 (Line 34):
+    Menu link did not contain a hash symbol.
+    Fixed: href="#menu".
+
+    Error 9 (Lines 40-41):
+    Paragraph markup was incorrectly structured.
+    Fixed: Used a complete opening and closing p tag.
+
+    Error 10 (Lines 42 and 46):
+    Duplicate id="item" used for two articles.
+    Fixed: Replaced with class="menu-item".
+
+    Error 11 (Line 53):
+    Video element did not have controls.
+    Fixed: Added the controls attribute.
+
+    Error 12 (Line 54):
+    Incorrect video MIME type "mp4".
+    Fixed: type="video/mp4".
+    -->
+
+    <!-- Website Header -->
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <h1>e-Café Campus</h1>
+
+            <!-- Navigation Bar -->
+            <nav aria-label="Main Navigation">
+
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- SECTION 1: Home -->
+        <section id="home" class="hero-section">
+
+            <div class="container">
+
+                <p class="hero-label">
+                    WELCOME TO E-CAFÉ CAMPUS
+                </p>
+
+                <h2>
+                    Fresh Coffee.
+                    <span>Delicious Food.</span>
+                </h2>
+
+                <p class="hero-description">
+                    Your favourite campus café serving
+                    freshly brewed coffee, delicious local
+                    meals and affordable student promotions.
+                </p>
+
+                <a href="#menu" class="hero-button">
+                    Explore Our Menu
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- SECTION 2: Today's Menu -->
+        <section id="menu" class="section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    FRESHLY PREPARED
+                </p>
+
+                <h2 class="section-title">
+                    Today's Menu
+                </h2>
+
+                <p id="intro">
+                    Freshly brewed coffee and local
+                    delights every day. Enjoy our special
+                    campus promotions at affordable prices!
+                </p>
+
+                <div class="menu-grid">
+
+                    <!-- Menu Item 1: Kopi Tarik -->
+                    <article class="menu-item">
+
+                        <div class="menu-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=85"
+                                alt="Freshly brewed coffee"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="menu-content">
+
+                            <span class="menu-category">
+                                HOT BEVERAGE
+                            </span>
+
+                            <h3>Kopi Tarik</h3>
+
+                            <p>
+                                Rich and aromatic Malaysian
+                                pulled coffee served fresh
+                                and hot.
+                            </p>
+
+                            <!-- Promotional pricing -->
+                            <div class="price-container">
+
+                                <span class="old-price">
+                                    RM 4.50
+                                </span>
+
+                                <span class="highlight">
+                                    RM 3.50
+                                </span>
+
+                            </div>
+
+                            <span class="promo-badge">
+                                STUDENT PROMOTION
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Menu Item 2: Nasi Lemak -->
+                    <article class="menu-item">
+
+                        <div class="menu-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85"
+                                alt="A freshly prepared rice meal"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="menu-content">
+
+                            <span class="menu-category">
+                                LOCAL FAVOURITE
+                            </span>
+
+                            <h3>Nasi Lemak</h3>
+
+                            <p>
+                                A delicious Malaysian rice
+                                dish served with sambal,
+                                egg and traditional sides.
+                            </p>
+
+                            <!-- Promotional pricing -->
+                            <div class="price-container">
+
+                                <span class="old-price">
+                                    RM 7.00
+                                </span>
+
+                                <span class="highlight">
+                                    RM 5.00
+                                </span>
+
+                            </div>
+
+                            <span class="promo-badge">
+                                SPECIAL OFFER
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SECTION 3: Video -->
+        <section id="video" class="section video-section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    DISCOVER OUR CAFÉ
+                </p>
+
+                <h2 class="section-title">
+                    Watch Our Story
+                </h2>
+
+                <p class="section-description">
+                    Experience the welcoming atmosphere
+                    of e-Café Campus.
+                </p>
+
+                <!-- Responsive HTML5 Video -->
+                <figure class="video-container">
+
+                    <video
+                        width="800"
+                        height="450"
+                        controls
+                        preload="metadata"
+                        playsinline
+                    >
+
+                        <source
+                            src="cafe.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support
+                        the HTML5 video tag.
+
+                    </video>
+
+                    <!-- Video Caption -->
+                    <figcaption>
+                        e-Café Campus: Fresh coffee,
+                        delicious food and a welcoming
+                        campus dining experience.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+        <!-- SECTION 4: Feedback Form -->
+        <section id="feedback" class="section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    WE VALUE YOUR OPINION
+                </p>
+
+                <h2 class="section-title">
+                    Customer Feedback
+                </h2>
+
+                <p class="section-description">
+                    Share your café experience with us.
+                </p>
+
+                <!-- HTML5 Feedback Form -->
+                <form
+                    class="feedback-form"
+                    action="#confirmation"
+                    method="get"
+                >
+
+                    <!-- Customer Name -->
+                    <div class="form-group">
+
+                        <label for="fullname">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Customer Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Visit Type -->
+                    <fieldset class="form-group">
+
+                        <legend>Visit Type</legend>
+
+                        <div class="form-options">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="visit"
+                                    value="dine-in"
+                                    required
+                                >
+                                Dine-in
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="visit"
+                                    value="take-away"
+                                >
+                                Take-away
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <!-- Favourite Items -->
+                    <fieldset class="form-group">
+
+                        <legend>Favourite Items</legend>
+
+                        <div class="form-options">
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="favourite"
+                                    value="kopi-tarik"
+                                >
+                                Kopi Tarik
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="favourite"
+                                    value="nasi-lemak"
+                                >
+                                Nasi Lemak
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="favourite"
+                                    value="tea"
+                                >
+                                Tea
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="favourite"
+                                    value="snacks"
+                                >
+                                Snacks
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <!-- Submit Button -->
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        Submit Feedback
+                    </button>
+
+                </form>
+
+                <!-- Feedback Submission Confirmation -->
+                <div id="confirmation" class="confirmation-overlay">
+
+                    <div class="confirmation-box">
+
+                        <div class="success-icon">
+                            &#10003;
+                        </div>
+
+                        <h2>Feedback Submitted Successfully!</h2>
+
+                        <p>
+                            Thank you for sharing your feedback
+                            with e-Café Campus!
+                        </p>
+
+                        <p>
+                            We appreciate your time and support.
+                            Your feedback helps us improve our
+                            food, drinks and customer experience.
+                        </p>
+
+                        <a href="#feedback" class="confirmation-button">
+                            Back to Café
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- SECTION 5: Footer and Contact -->
+    <footer id="contact" class="site-footer">
+
+        <div class="container">
+
+            <h2>e-Café Campus</h2>
+
+            <p>
+                Good Food. Great Coffee.
+                Better Campus Life.
+            </p>
+
+            <!-- Contact Address -->
+            <address>
+                Email:
+                <a href="mailto:ecafe@example.com">
+                    ecafe@example.com
+                </a>
+            </address>
+
+            <p class="copyright">
+                &copy; 2026 e-Café Campus.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

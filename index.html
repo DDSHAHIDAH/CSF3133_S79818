@@ -5,60 +5,328 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSF3133 Web Development</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        /* STUDENT INFORMATION */
+        .student-info {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .student-info h2 {
+            font-size: 16px;
+            margin: 0 0 15px;
+        }
+
+        .info-row {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 10px;
+            padding: 7px 0;
+            font-size: 14px;
+        }
+
+        .info-label {
+            color: #64748b;
+        }
+
+        .info-value {
+            font-weight: 600;
+            overflow-wrap: anywhere;
+        }
+
+        .section-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* LAB DROPDOWNS */
+        details {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 18px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            font-size: 22px;
+            color: #64748b;
+        }
+
+        details[open] summary::after {
+            content: "−";
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .links {
+            padding: 10px;
+        }
+
+        .links a {
+            display: block;
+            padding: 12px 14px;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .links a:hover {
+            background: #f1f5f9;
+            color: #2563eb;
+        }
+
+        .links .report {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 35px;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 480px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .info-row {
+                grid-template-columns: 95px 1fr;
+                font-size: 13px;
+            }
+
+            summary {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
+<main class="container">
+
     <h1>CSF3133 Web Development</h1>
-    <p>Laboratory Exercises</p>
+    <p class="subtitle">Laboratory Exercises</p>
 
-    <!-- Lab 1 -->
-    <section>
-        <h2>Lab 1</h2>
-        <p>HTML Fundamentals</p>
+    <!-- STUDENT INFORMATION -->
+    <section class="student-info">
+        <h2>Student Information</h2>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab1/lab1_ExerA.html" target="_blank">Exercise A</a><br>
+        <div class="info-row">
+            <span class="info-label">Name</span>
+            <span class="info-value">
+                DINESH A/L RAVINDRA SINGH
+            </span>
+        </div>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab1/lab1_ExerB.html" target="_blank">Exercise B</a><br>
+        <div class="info-row">
+            <span class="info-label">Matric No.</span>
+            <span class="info-value">S79818</span>
+        </div>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab1/contact.html" target="_blank">Contact</a><br>
+        <div class="info-row">
+            <span class="info-label">Group</span>
+            <span class="info-value">K4</span>
+        </div>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab1/CSF3133_S79818_LAB1.pdf" target="_blank">Lab Report PDF</a>
+        <div class="info-row">
+            <span class="info-label">Programme</span>
+            <span class="info-value">
+                SOFTWARE ENGINEERING
+            </span>
+        </div>
     </section>
 
-    <hr>
+    <h2 class="section-title">Laboratory Exercises</h2>
 
-    <!-- Lab 2 -->
-    <section>
-        <h2>Lab 2</h2>
-        <p>Lab 2</p>
+    <!-- LAB 1 -->
+    <details name="laboratory">
+        <summary>Lab 1 - HTML Fundamentals</summary>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab2/lab2_ExerA.html" target="_blank">Exercise A</a><br>
+        <div class="links">
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab1/lab1_ExerA.html"
+               target="_blank" rel="noopener noreferrer">
+                Exercise A
+            </a>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab2/register.html" target="_blank">register.html</a><br>
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab1/lab1_ExerB.html"
+               target="_blank" rel="noopener noreferrer">
+                Exercise B
+            </a>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab2/lab2_ExerB.html" target="_blank">Exercise B</a><br>
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab1/contact.html"
+               target="_blank" rel="noopener noreferrer">
+                Contact
+            </a>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab2/Lab2_CSF3133_S79818.pdf" target="_blank">Lab Report PDF</a>
-    </section>
+            <a class="report"
+               href="https://ddshahidah.github.io/CSF3133_S79818/Lab1/CSF3133_S79818_LAB1.pdf"
+               target="_blank" rel="noopener noreferrer">
+                Lab Report PDF
+            </a>
+        </div>
+    </details>
 
-    <hr>
+    <!-- LAB 2 -->
+    <details name="laboratory">
+        <summary>Lab 2 - HTML Exercises</summary>
 
-    <!-- Lab 3 -->
-    <section>
-        <h2>Lab 3</h2>
-        <p>HTML5 Forms, Input Elements and Output Calculations</p>
+        <div class="links">
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab2/lab2_ExerA.html"
+               target="_blank" rel="noopener noreferrer">
+                Exercise A
+            </a>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab3/lab3_ExerA.html" target="_blank">Exercise A - CampusBake Online Order</a><br>
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab2/register.html"
+               target="_blank" rel="noopener noreferrer">
+                Registration Page
+            </a>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab3/purchase-confirmation.html" target="_blank">Exercise A - Purchase Confirmation</a><br>
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab2/lab2_ExerB.html"
+               target="_blank" rel="noopener noreferrer">
+                Exercise B
+            </a>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab3/lab3_ExerB.html" target="_blank">Exercise B - Ticket Booking</a><br>
+            <a class="report"
+               href="https://ddshahidah.github.io/CSF3133_S79818/Lab2/Lab2_CSF3133_S79818.pdf"
+               target="_blank" rel="noopener noreferrer">
+                Lab Report PDF
+            </a>
+        </div>
+    </details>
 
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab3/booking-success.html" target="_blank">Exercise B - Booking Confirmation</a><br>
-        
-        <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab3/Lab3_CSF3133_S79818.pdf" target="_blank">Lab Report PDF</a>
+    <!-- LAB 3 -->
+    <details name="laboratory">
+        <summary>Lab 3 - HTML5 Forms</summary>
 
-    </section>
+        <div class="links">
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab3/lab3_ExerA.html"
+               target="_blank" rel="noopener noreferrer">
+                Exercise A - CampusBake Online Order
+            </a>
+
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab3/purchase-confirmation.html"
+               target="_blank" rel="noopener noreferrer">
+                Exercise A - Purchase Confirmation
+            </a>
+
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab3/lab3_ExerB.html"
+               target="_blank" rel="noopener noreferrer">
+                Exercise B - Ticket Booking
+            </a>
+
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab3/booking-success.html"
+               target="_blank" rel="noopener noreferrer">
+                Exercise B - Booking Confirmation
+            </a>
+
+            <a class="report"
+               href="https://ddshahidah.github.io/CSF3133_S79818/Lab3/Lab3_CSF3133_S79818.pdf"
+               target="_blank" rel="noopener noreferrer">
+                Lab Report PDF
+            </a>
+        </div>
+    </details>
+
+    <!-- LAB 4 -->
+    <details name="laboratory">
+        <summary>Lab 4 - HTML &amp; CSS</summary>
+
+        <div class="links">
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab4/lab4_ExerA.html"
+               target="_blank" rel="noopener noreferrer">
+                Exercise A - Visit Terengganu
+            </a>
+
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab4/style.css"
+               target="_blank" rel="noopener noreferrer">
+                Exercise A - Visit Terengganu CSS
+            </a>
+
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab4/lab4_ExerB.html"
+               target="_blank" rel="noopener noreferrer">
+                Exercise B - e'Cafe Campus
+            </a>
+
+            <a href="https://ddshahidah.github.io/CSF3133_S79818/Lab4/cafe.css"
+               target="_blank" rel="noopener noreferrer">
+                Exercise B - e'Cafe Campus CSS
+            </a>
+
+            <a class="report"
+               href="https://ddshahidah.github.io/CSF3133_S79818/Lab4/S79818_LAB04.pdf"
+               target="_blank" rel="noopener noreferrer">
+                Lab Report PDF
+            </a>
+        </div>
+    </details>
+
+    <footer>
+        CSF3133 Web Development | 2026
+    </footer>
+
+</main>
 
 </body>
 </html>

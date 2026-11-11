@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore beautiful destinations, travel packages and attractions in Terengganu, Malaysia.">
+
+    <title>Visit Terengganu | Discover Paradise</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS: Page-specific styling -->
+    <style>
+        #home {
+            background: linear-gradient(
+                120deg,
+                rgba(5, 35, 65, 0.88),
+                rgba(0, 113, 145, 0.65)
+            ),
+            url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=85")
+            center/cover no-repeat;
+        }
+
+        #video {
+            background-color: #eaf7fa;
+        }
+
+        .hero-highlight {
+            color: #ffd166;
+        }
+
+        .section-note {
+            text-align: center;
+            color: #526477;
+            margin-bottom: 35px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER: Website title and navigation -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="#home" class="logo">
+                Visit<span>Terengganu</span>
+            </a>
+
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#trip">Trip Interest</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- SECTION 1: Home / Hero -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+
+                <p class="eyebrow">WELCOME TO TERENGGANU</p>
+
+                <h1>
+                    Discover the Beauty of
+                    <span class="hero-highlight">Terengganu</span>
+                </h1>
+
+                <p class="hero-description">
+                    Experience crystal-clear waters, tropical islands,
+                    breathtaking nature and unforgettable adventures
+                    along Malaysia's beautiful east coast.
+                </p>
+
+                <a href="#destinations" class="btn btn-primary">
+                    Explore Destinations
+                </a>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2: Destinations -->
+        <section id="destinations" class="section">
+
+            <div class="container">
+
+                <p class="section-label">EXPLORE TERENGGANU</p>
+
+                <h2 class="section-title">
+                    Popular Destinations
+                </h2>
+
+                <p class="section-note">
+                    Discover amazing places and enjoy our
+                    special promotional travel packages.
+                </p>
+
+                <div class="destination-grid">
+
+                    <!-- Article 1: Redang Island -->
+                    <article class="card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85"
+                            alt="Beautiful tropical beach with turquoise water"
+                            loading="lazy"
+                        >
+
+                        <div class="card-content">
+
+                            <span class="category">ISLAND ESCAPE</span>
+
+                            <h3>Redang Island</h3>
+
+                            <p>
+                                Discover white sandy beaches, beautiful
+                                coral reefs and crystal-clear waters.
+                                A perfect destination for snorkeling
+                                and relaxing.
+                            </p>
+
+                            <div class="price-box">
+                                <span class="old-price">RM 299</span>
+                                <span class="price">RM 199</span>
+                            </div>
+
+                            <a href="#trip" class="card-link">
+                                I'm Interested
+                            </a>
+
+                        </div>
+                    </article>
+
+                    <!-- Article 2: Perhentian Islands -->
+                    <article class="card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=85"
+                            alt="Tropical island surrounded by clear blue water"
+                            loading="lazy"
+                        >
+
+                        <div class="card-content">
+
+                            <span class="category">BEACH ADVENTURE</span>
+
+                            <h3>Perhentian Islands</h3>
+
+                            <p>
+                                Enjoy exciting marine adventures,
+                                peaceful beaches and spectacular
+                                underwater scenery at one of
+                                Malaysia's famous island destinations.
+                            </p>
+
+                            <div class="price-box">
+                                <span class="old-price">RM 349</span>
+                                <span class="price">RM 249</span>
+                            </div>
+
+                            <a href="#trip" class="card-link">
+                                I'm Interested
+                            </a>
+
+                        </div>
+                    </article>
+
+                    <!-- Article 3: Kenyir Lake -->
+                    <article class="card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=85"
+                            alt="Lush green tropical rainforest scenery"
+                            loading="lazy"
+                        >
+
+                        <div class="card-content">
+
+                            <span class="category">NATURE EXPLORATION</span>
+
+                            <h3>Kenyir Lake</h3>
+
+                            <p>
+                                Explore peaceful lake scenery,
+                                tropical rainforests, waterfalls
+                                and unforgettable outdoor adventures
+                                surrounded by nature.
+                            </p>
+
+                            <div class="price-box">
+                                <span class="old-price">RM 199</span>
+                                <span class="price">RM 129</span>
+                            </div>
+
+                            <a href="#trip" class="card-link">
+                                I'm Interested
+                            </a>
+
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- HTML5 Meter Element -->
+                <div class="booking-status">
+
+                    <h3>Trip Booking Progress</h3>
+
+                    <p>
+                        28 out of 40 available trip seats
+                        have been filled.
+                    </p>
+
+                    <label for="booking-meter">
+                        Seats Filled: 70%
+                    </label>
+
+                    <meter
+                        id="booking-meter"
+                        min="0"
+                        max="40"
+                        value="28"
+                    >
+                        28 out of 40
+                    </meter>
+
+                    <p class="meter-note">
+                        Limited seats available for our
+                        promotional packages!
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: Promotional Video -->
+        <section id="video" class="section">
+
+            <div class="container">
+
+                <p class="section-label">WATCH & DISCOVER</p>
+
+                <h2 class="section-title">
+                    Experience Terengganu
+                </h2>
+
+                <p class="section-note">
+                    Watch our promotional video and discover
+                    what makes Terengganu special.
+                </p>
+
+                <figure class="video-figure">
+
+                    <video
+                        controls
+                        width="960"
+                        height="540"
+                        preload="metadata"
+                        playsinline
+                    >
+                        <source
+                            src="terengganu.mp4"
+                            type="video/mp4"
+                        >
+
+                        Your browser does not support HTML5 video.
+                        Please use a modern browser.
+                    </video>
+
+                    <figcaption class="caption">
+                        Discover Terengganu: Beautiful beaches,
+                        tropical islands and natural attractions.
+                    </figcaption>
+
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: Trip Interest Form -->
+        <section id="trip" class="section">
+
+            <div class="container">
+
+                <p class="section-label">PLAN YOUR JOURNEY</p>
+
+                <h2 class="section-title">
+                    Register Your Interest
+                </h2>
+
+                <p class="section-note">
+                    Tell us about your travel interests
+                    and start planning your next adventure.
+                </p>
+
+                <form class="trip-form" action="#confirmation" method="get">
+
+                    <!-- Name Field -->
+                    <div class="form-group">
+
+                        <label for="fullname">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Traveller Type -->
+                    <fieldset class="form-group">
+
+                        <legend>Traveller Type</legend>
+
+                        <div class="option-group">
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="traveller"
+                                    value="student"
+                                    required
+                                >
+                                Student
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="traveller"
+                                    value="staff"
+                                >
+                                Staff
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="traveller"
+                                    value="public"
+                                >
+                                Public
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <!-- Travel Interests -->
+                    <fieldset class="form-group">
+
+                        <legend>Travel Interests</legend>
+
+                        <div class="option-group">
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="interests"
+                                    value="islands"
+                                >
+                                Islands
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="interests"
+                                    value="food"
+                                >
+                                Food
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="interests"
+                                    value="culture"
+                                >
+                                Culture
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="interests"
+                                    value="nature"
+                                >
+                                Nature
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <!-- Submit Button -->
+                    <button
+                        type="submit"
+                        class="btn btn-submit"
+                    >
+                        Submit Interest
+                    </button>
+
+                </form>
+
+
+                <!-- Confirmation Message -->
+                <div id="confirmation" class="confirmation-box">
+
+                    <div class="confirmation-content">
+
+                        <div class="success-icon">&#10003;</div>
+
+                        <h2>Interest Submitted!</h2>
+
+                        <p>
+                            Thank you for your interest in visiting
+                            Terengganu!
+                        </p>
+
+                        <p>
+                            Your form has been submitted successfully.
+                            We hope to see you exploring Terengganu soon!
+                        </p>
+
+                        <a href="#trip" class="confirmation-button">
+                            Back to Form
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: Copyright and contact information -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <h2>Visit Terengganu</h2>
+
+            <p>
+                Discover beautiful destinations and
+                unforgettable travel experiences.
+            </p>
+
+            <address>
+                Contact:
+                <a href="mailto:hello@example.com">
+                    visit-terengganu.gov.my
+                </a>
+            </address>
+
+            <p class="copyright">
+                &copy; 2026 Visit Terengganu.
+                Educational Tourism Promotion Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

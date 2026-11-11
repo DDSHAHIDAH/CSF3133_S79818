@@ -1,0 +1,698 @@
+
+/* ========================================
+   e-CAFE CAMPUS
+   External Stylesheet - cafe.css
+   CSF3133 Additional Lab Exercise 4
+   ======================================== */
+
+/* 1. Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffdf9;
+    color: #333333;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 2. Link States - Correct LVHA Order */
+
+a:link {
+    color: #1A5276;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #7D3C98;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E67E22;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #C0392B;
+    text-decoration: underline;
+}
+
+/* 3. Header and Navigation Bar */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 85px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.site-header h1 {
+    color: #6F4E37;
+    font-size: 27px;
+    white-space: nowrap;
+}
+
+/* Remove bullet points from navigation */
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav-menu li {
+    list-style-type: none;
+}
+
+/* Navigation links displayed as blocks */
+
+.nav-menu a {
+    display: block;
+    padding: 12px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s,
+                color 0.3s;
+}
+
+.nav-menu a:link,
+.nav-menu a:visited {
+    color: #5A4030;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    color: #ffffff;
+    background-color: #8B5E3C;
+    text-decoration: none;
+}
+
+.nav-menu a:active {
+    color: #ffffff;
+    background-color: #4E342E;
+}
+
+/* 4. Home / Hero Section */
+
+.hero-section {
+    background: linear-gradient(
+        120deg,
+        rgba(47, 29, 19, 0.92),
+        rgba(116, 74, 43, 0.78)
+    ),
+    url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
+
+    min-height: 480px;
+    padding: 90px 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #F8D6A2;
+    margin-bottom: 15px;
+}
+
+.hero-section h2 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero-section h2 span {
+    color: #FFD38A;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 13px 30px;
+    background-color: #F4C27A;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.hero-button:link,
+.hero-button:visited {
+    color: #3F2B20;
+    text-decoration: none;
+}
+
+.hero-button:hover {
+    background-color: #FFDDA9;
+    color: #3F2B20;
+    text-decoration: none;
+}
+
+.hero-button:active {
+    background-color: #E7A94B;
+}
+
+/* 5. General Section Styling */
+
+.section {
+    padding: 80px 0;
+}
+
+.section-label {
+    text-align: center;
+    color: #A66B3D;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    text-align: center;
+    color: #5A3E2B;
+    font-size: clamp(28px, 4vw, 36px);
+    margin: 12px 0 30px;
+    text-decoration: underline;
+    text-decoration-color: #D7A76B;
+    text-underline-offset: 9px;
+}
+
+.section-description {
+    text-align: center;
+    color: #6B625B;
+    margin-bottom: 30px;
+}
+
+/* 6. Menu Section */
+
+#intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    border: 1px solid #E9DED3;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.menu-image img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.menu-content {
+    padding: 28px;
+}
+
+.menu-category {
+    color: #A66B3D;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu-content h3 {
+    color: #5A3E2B;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.menu-content p {
+    color: #6B625B;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* 7. Promotional Pricing and Text Decoration */
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 18px 0;
+}
+
+.old-price {
+    color: #8A8A8A;
+    font-size: 17px;
+    text-decoration: line-through;
+}
+
+.highlight {
+    font-size: 26px;
+    font-weight: bold;
+    color: #C0392B;
+}
+
+.promo-badge {
+    display: inline-block;
+    padding: 7px 12px;
+    background-color: #FFF1DC;
+    color: #8A572D;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* 8. Video Section */
+
+.video-section {
+    background-color: #F9F1E8;
+}
+
+.video-container {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.video-container video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-color: #2C2019;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.video-container figcaption {
+    margin-top: 18px;
+    color: #6B625B;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* 9. Feedback Form */
+
+.feedback-form {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #E9DED3;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group > label,
+.form-group legend {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #5A3E2B;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #CFC4B8;
+    border-radius: 7px;
+    font: inherit;
+}
+
+.form-group input:focus {
+    outline: 2px solid #A66B3D;
+    outline-offset: 2px;
+}
+
+fieldset.form-group {
+    border: none;
+    min-width: 0;
+}
+
+.form-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+}
+
+.form-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.form-options input {
+    width: 16px;
+    height: 16px;
+    accent-color: #8B5E3C;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8B5E3C;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #6F452A;
+}
+
+.submit-button:active {
+    background-color: #4E342E;
+}
+
+/* 10. Footer */
+
+.site-footer {
+    background-color: #30241D;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.site-footer h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.site-footer p {
+    color: #E4D8CC;
+}
+
+.site-footer address {
+    margin: 20px 0;
+    font-style: normal;
+}
+
+.site-footer a:link,
+.site-footer a:visited {
+    color: #FFD38A;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+}
+
+.site-footer a:active {
+    color: #F4A261;
+}
+
+.copyright {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #665348;
+    font-size: 13px;
+}
+
+/* 11. Responsive Tablet */
+
+@media (max-width: 900px) {
+
+    .header-container {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-menu {
+        justify-content: center;
+    }
+
+    .menu-grid {
+        gap: 20px;
+    }
+
+}
+
+/* 12. Responsive Mobile */
+
+@media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 160px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .header-container {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .site-header h1 {
+        font-size: 23px;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+        padding: 8px 10px;
+    }
+
+    .hero-section {
+        min-height: 420px;
+        padding: 65px 20px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-image img {
+        height: 220px;
+    }
+
+    .menu-content {
+        padding: 22px;
+    }
+
+    .feedback-form {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .form-options {
+        gap: 12px;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* 13. Accessibility */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #E7A94B;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+
+}
+
+/* ========================================
+   FEEDBACK CONFIRMATION POPUP
+   HTML + CSS Only (No JavaScript)
+   ======================================== */
+
+/* Hidden by default */
+.confirmation-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 15, 10, 0.75);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Show popup when URL targets #confirmation */
+.confirmation-overlay:target {
+    display: flex;
+}
+
+/* Confirmation Box */
+.confirmation-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    animation: popupAppear 0.3s ease;
+}
+
+/* Success Icon */
+.success-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    background-color: #E2F8ED;
+    color: #15945C;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Confirmation Heading */
+.confirmation-box h2 {
+    color: #19334A;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Confirmation Description */
+.confirmation-box p {
+    color: #526477;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* Back Button */
+.confirmation-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 30px;
+    background-color: #8B5E3C;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.confirmation-button:link,
+.confirmation-button:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.confirmation-button:hover {
+    background-color: #6F452A;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.confirmation-button:active {
+    background-color: #4E342E;
+    color: #ffffff;
+}
+
+/* Popup Animation */
+@keyframes popupAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .confirmation-box {
+        animation: none;
+    }
+}
