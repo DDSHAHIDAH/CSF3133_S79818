@@ -1,0 +1,154 @@
+/* 1. Body: fonts, page spacing, and background image */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f8f8f8;
+    background-image: url('paper.gif');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+/* 2. Header: bookstore banner with cover image and white text */
+.site-header {
+    background-color: #184bf7;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('books.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+/* 3. Headings: separate Google Font and spacing */
+h1, h2 {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 2.2rem;
+}
+
+.site-header p {
+    margin: 0;
+}
+
+h2 {
+    color: #184bf7;
+    margin-top: 0;
+}
+
+/* 4. Navigation: dark horizontal menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* 5. Navigation interactions: hover and current page */
+nav li a:hover {
+    background-color: #111;
+}
+
+nav li a.active {
+    background-color: #04aa6d;
+}
+
+nav li a.active:hover {
+    background-color: #038957;
+}
+
+/* 6. Main content: readable centered layout */
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 32px auto;
+}
+
+main p {
+    line-height: 1.6;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* 7. Product table: collapsed borders and full width */
+#products {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+#products th,
+#products td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* 8. Table heading: uppercase, blue, centered, with vertical padding */
+#products th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #04aa6d;
+    color: white;
+}
+
+/* 9. Table rows: stripes and hover highlight */
+#products tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#products tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* 10. Price: right align the third column */
+#products tbody td:nth-child(3) {
+    text-align: right;
+}
+
+/* 11. Footer: subtle background and centered copyright */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 12. Responsive navigation and header for narrow screens */
+@media (max-width: 480px) {
+    .site-header {
+        padding: 48px 16px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    nav li {
+        float: none;
+    }
+}

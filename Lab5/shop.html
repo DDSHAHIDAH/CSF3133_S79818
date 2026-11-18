@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bookstore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <!--
+    ERROR CORRECTIONS FROM THE GIVEN CODE:
+    Error 1 (shop.css, line 2): 'Robotto' was misspelled; corrected to 'Roboto'.
+    Error 2 (shop.css, line 3): 'bacground-image' was misspelled; corrected to 'background-image'.
+    Error 3 (shop.css, line 4): 'background-repeat: no repeat' was invalid; corrected to 'no-repeat'.
+    Error 4 (shop.css, line 5): 'bacground-position' was misspelled; corrected to 'background-position'.
+    Error 5 (shop.css, line 18): 'display: inline' did not create full clickable navigation blocks; corrected to 'display: block'.
+    Error 6 (shop.css, line 23): 'li:a:hover' was an incorrect selector; corrected to 'li a:hover'.
+    Error 7 (shop.css, line 26): '#products' did not match the HTML table id 'product'; standardised both to 'products'.
+    Error 8 (shop.css, line 27): 'collapes' was misspelled; corrected to 'collapse'.
+    Error 9 (shop.css, line 34): 'nth-child(2)' selected only row 2; corrected to 'nth-child(even)' for alternating rows.
+    Error 10 (shop.css, line 37): 'tr:hovered' was an incorrect pseudo-class; corrected to 'tr:hover'.
+    Error 11 (shop.css, line 45): Missing semicolon after 'background-color: #f1f1f1'; added it.
+    Error 12 (shop.html, line 18): 'color=#184BF72' was an invalid CSS declaration/colour; moved valid blue styling into shop.css.
+    ADDITIONAL EXTENSIONS: Semantic header/nav/main/footer, a Home active link, responsive layout, Merriweather headings, and refined table/footer styling.
+    -->
+
+    <header id="home" class="site-header">
+        <h1>Campus Bookstore</h1>
+        <p>Textbooks, stationery and more for every student.</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a class="active" href="#home" aria-current="page">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="books" aria-labelledby="books-heading">
+            <h2 id="books-heading">Available Products</h2>
+            <p>Find essential books and stationery for your classes at student-friendly prices.</p>
+            <div class="table-wrapper">
+                <table id="products">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Price (RM)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Web Design Basics</td><td>Textbook</td><td>45.00</td></tr>
+                        <tr><td>A4 Notebook</td><td>Stationery</td><td>6.50</td></tr>
+                        <tr><td>USB Drive 32GB</td><td>Gadget</td><td>25.00</td></tr>
+                        <tr><td>Highlighter Set</td><td>Stationery</td><td>9.90</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 Campus Bookstore</p>
+    </footer>
+</body>
+</html>
