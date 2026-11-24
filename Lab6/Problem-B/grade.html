@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page heading -->
+    <header>
+        <small>CSF3133 / ADDITIONAL LAB 6</small>
+        <h1>Student Grade Calculator</h1>
+        <p>Enter a student name and mark to check the grade.</p>
+    </header>
+    <main>
+        <!-- Student details and form events -->
+        <section class="panel" aria-labelledby="details">
+            <h2 id="details">Student details</h2>
+            <form name="gradeForm" onsubmit="return checkMark()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter student name">
+                <label for="mark">Mark (0-100):</label>
+                <input type="text" id="mark" name="mark" inputmode="decimal" placeholder="Enter mark">
+                <div class="actions">
+                    <button type="submit">Check Grade</button>
+                    <button type="button" class="secondary" onclick="randomMark()">Random Mark</button>
+                </div>
+            </form>
+        </section>
+        <!-- Result and date updated through JavaScript -->
+        <section class="panel" aria-live="polite">
+            <h2>Grade result</h2>
+            <p id="result"></p>
+            <p id="checkedTime"></p>
+        </section>
+        <!-- Grade reference table generated using a loop -->
+        <section class="panel">
+            <h2>Grade reference</h2>
+            <button type="button" class="secondary" onclick="showTable()">Show Grade Table</button>
+            <div id="tableContainer"></div>
+        </section>
+    </main>
+    <footer>CSF3133 &middot; Lab Exercise 6 &middot; Problem B</footer>
+    <script src="grade.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* Base layout and typography */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #eef1ed; color: #172d29; }
+header, main, footer { max-width: 760px; margin: auto; padding: 24px; }
+header { padding-top: 38px; }
+header small { letter-spacing: .13em; font-weight: 700; color: #42675c; }
+h1 { font-size: clamp(28px, 5vw, 42px); margin: 8px 0; }
+h2 { font-size: 20px; margin: 0 0 16px; }
+header p, footer { color: #52645e; }
+main { display: grid; gap: 16px; padding-top: 0; }
+.panel { background: white; border: 1px solid #d5dfd8; border-radius: 14px; padding: 20px; }
+/* Form fields and button interactions */
+form { display: grid; gap: 10px; }
+label { font-weight: 650; }
+input { width: 100%; padding: 11px; border: 1px solid #aabcb3; border-radius: 7px; font: inherit; margin-bottom: 6px; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+button { padding: 11px 18px; background: #20594a; color: white; border: 1px solid transparent; border-radius: 7px; cursor: pointer; font: inherit; font-weight: 650; }
+button:hover { background: #143b31; }
+button.secondary { background: white; color: #20594a; border-color: #aabcb3; }
+button.secondary:hover { background: #e6eee8; }
+button:focus-visible, input:focus-visible { outline: 3px solid #b77828; outline-offset: 3px; }
+/* Dynamic result and date */
+#result { font-size: 22px; font-weight: 750; margin: 0; overflow-wrap: anywhere; }
+#checkedTime { color: #52645e; margin: 8px 0 0; font-size: 14px; }
+#result:empty::before { content: "No grade checked yet."; font-size: 15px; font-weight: 400; color: #52645e; }
+/* Grade table */
+table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+th, td { border: 1px solid #d5dfd8; padding: 10px; text-align: left; }
+th { background: #20594a; color: white; }
+tbody tr:nth-child(even) { background: #f4f7f4; }
+footer { text-align: center; font-size: 14px; }
+/* Small screens */
+@media (max-width: 480px) { header, main, footer { padding-left: 12px; padding-right: 12px; } .panel { padding: 14px; } }

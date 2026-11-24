@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Game title and instructions -->
+  <header><small>COMPUTER SCIENCE CLUB / OPEN DAY</small><h1>Rock, Paper, Scissors</h1><p>Enter your name, start the game and choose your move.</p></header>
+  <main>
+    <!-- Player registration -->
+    <section class="panel registration"><label for="playerName">Your name</label><input id="playerName" type="text" placeholder="Enter your name"><button onclick="startGame()">Start Game</button><p id="welcome" aria-live="polite"></p></section>
+    <!-- Game choices and images -->
+    <section class="panel arena"><h2>Choose your move</h2><div class="moves"><button onclick="playRound('rock')">✊ Rock</button><button onclick="playRound('paper')">✋ Paper</button><button onclick="playRound('scissors')">✌ Scissors</button></div><div class="versus"><div><h3>You</h3><img id="playerImg" src="rock.png" alt="Player choice"><p id="playerChoice">Ready</p></div><strong>VS</strong><div><h3>Computer</h3><img id="computerImg" src="rock.png" alt="Computer choice"><p id="computerChoice">Ready</p></div></div><p id="result" aria-live="polite"></p></section>
+    <!-- Scoreboard -->
+    <section class="scores" aria-label="Scoreboard"><div class="panel"><span>Wins</span><strong id="wins">0</strong></div><div class="panel"><span>Losses</span><strong id="losses">0</strong></div><div class="panel"><span>Draws</span><strong id="draws">0</strong></div></section>
+    <!-- Round history and controls -->
+    <section class="panel"><h2>Round history</h2><div class="table-wrap"><table id="history"><thead><tr><th>Round</th><th>You</th><th>Computer</th><th>Result</th></tr></thead><tbody id="historyBody"></tbody></table></div><div class="actions"><button onclick="showSummary()">Show Summary</button><button class="secondary" onclick="resetGame()">Reset</button></div><p id="summary" aria-live="polite"></p></section>
+  </main>
+  <!-- Start time and copyright -->
+  <footer><p id="startTime"></p><p>&copy; 2026 Computer Science Club</p></footer>
+  <script src="game.js"></script>
+</body>
+</html>

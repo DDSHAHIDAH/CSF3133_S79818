@@ -1,0 +1,44 @@
+/* Base layout and typography */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #eef1ed; color: #172d29; }
+header, main, footer { max-width: 900px; margin: auto; padding: 24px; }
+header { padding-top: 38px; }
+header small { letter-spacing: .13em; font-weight: 700; color: #42675c; }
+h1 { font-size: clamp(30px, 5vw, 46px); margin: 8px 0; }
+h2 { font-size: 20px; margin: 0 0 16px; }
+header p, footer { color: #52645e; }
+main { display: grid; gap: 16px; padding-top: 0; }
+.panel { background: white; border: 1px solid #d5dfd8; border-radius: 14px; padding: 20px; }
+/* Inputs and interactive buttons */
+.registration { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.registration p { flex-basis: 100%; margin: 0; }
+input { padding: 11px; border: 1px solid #aabcb3; border-radius: 7px; font: inherit; flex: 1; min-width: 140px; }
+button { padding: 11px 18px; background: #20594a; color: white; border: 1px solid transparent; border-radius: 7px; cursor: pointer; font: inherit; font-weight: 650; }
+button:hover { background: #143b31; }
+button:focus-visible, input:focus-visible { outline: 3px solid #b77828; outline-offset: 3px; }
+button.secondary { background: white; color: #20594a; border-color: #aabcb3; }
+button.secondary:hover { background: #e6eee8; }
+/* Game arena and fixed-size choice images */
+.arena { text-align: center; }
+.moves, .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.moves { justify-content: center; }
+.versus { display: flex; align-items: center; justify-content: center; gap: clamp(10px, 5vw, 60px); margin-top: 18px; }
+.versus h3 { font-size: 14px; }
+.versus img { width: 120px; height: 120px; object-fit: contain; }
+.versus p { margin: 5px; text-transform: capitalize; }
+#result { min-height: 28px; font-size: 22px; font-weight: 750; margin-bottom: 0; }
+/* Scoreboard */
+.scores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.scores .panel { display: flex; flex-direction: column; gap: 6px; }
+.scores strong { font-size: 30px; }
+#wins { color: green; } #losses { color: red; } #draws { color: grey; }
+/* History table */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+th, td { border: 1px solid #d5dfd8; padding: 10px; text-align: left; }
+th { background: #20594a; color: white; }
+tbody tr:nth-child(even) { background: #f4f7f4; }
+#summary { font-weight: 650; margin-bottom: 0; }
+footer { text-align: center; font-size: 14px; }
+/* Small screen adjustments */
+@media (max-width: 480px) { header, main, footer { padding-left: 12px; padding-right: 12px; } .panel { padding: 12px; } .scores { gap: 6px; } .moves button { padding: 9px; } }
